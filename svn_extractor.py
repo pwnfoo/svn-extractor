@@ -195,7 +195,7 @@ This program actually automates the directory navigation and text extraction pro
     excludes = x.excludes.split(',')
     prox = x.proxy
     proxy_dict = ""
-    if prox != None:
+    if prox:
         print(prox)
         print("Proxy Defined")
         proxy_dict = {"http": prox, "https": prox}
@@ -242,12 +242,12 @@ This program actually automates the directory navigation and text extraction pro
                 if rwc == 0:
                     if x.userlist:
                         show_list(
-                            author_list, "List of Usersnames used to commit in svn are listed below")
+                            author_list, "List of usernames used to commit in svn are listed below")
                         exit()
         else:
             if show_debug:
                 print("Status code returned : " + str(r.status_code))
-                print("Full Respose")
+                print("Full Response")
                 print(r.text)
             print("WC.db Lookup FAILED")
         if not x.wcdb:
